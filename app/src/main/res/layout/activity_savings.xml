@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Savings Goals"
+            android:textColor="#111111"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set goals and track your savings"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="30dp"/>
+
+        <EditText
+            android:id="@+id/goalNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Goal Name"
+            android:inputType="text"
+            android:padding="14dp"/>
+
+        <EditText
+            android:id="@+id/goalAmountInput"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:hint="Target Amount (R)"
+            android:inputType="numberDecimal"
+            android:padding="14dp"/>
+
+        <EditText
+            android:id="@+id/currentSavingsInput"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:hint="Current Savings (R)"
+            android:inputType="numberDecimal"
+            android:padding="14dp"/>
+
+        <Button
+            android:id="@+id/saveGoalBtn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="22dp"
+            android:text="SAVE GOAL"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#1B5E20"/>
+
+        <TextView
+            android:id="@+id/goalNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Goal: No goal set"
+            android:textColor="#111111"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/goalProgressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Progress: R 0.00 / R 0.00"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:padding="10dp"/>
+
+        <ProgressBar
+            android:id="@+id/savingsProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progress="0"/>
+
+        <TextView
+            android:id="@+id/savingsPercentageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0% saved"
+            android:textColor="#1B5E20"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
