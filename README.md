@@ -1,71 +1,67 @@
-# BudgetBuddySA
+# BudgetBuddy SA
 
 ## Personal Financial Management Mobile Application
 
-BudgetBuddySA is a mobile financial-management application designed to help students and young adults manage their personal finances.
+BudgetBuddy SA is a Kotlin-based Android application designed to help users manage their personal finances.
 
-## Purpose
+## Features
 
-The application allows users to:
+- User registration and login
+- Expense tracking
+- Expense categories
+- Budget management
+- Savings goals
+- Achievements and gamification
+- Dashboard with financial summaries
+- Offline data storage
+- REST API integration
+- Room Database
+- Unit testing
+- GitHub Actions CI
 
-- Register and log in securely
-- Track expenses
-- Categorise expenses
-- Create monthly budgets
-- Set savings goals
-- Monitor financial progress
-- Earn achievements
-- Receive notifications
-- Use selected features offline
-- Synchronise data when internet connectivity is restored
-- Change application settings
-- Select supported South African languages
-
-## Technologies
+## Technologies Used
 
 - Kotlin
 - Android Studio
-- REST API
-- MySQL
+- Android SDK
 - Room Database
+- REST API
+- Spring Boot
+- Gradle
 - GitHub
 - GitHub Actions
 
-## Main Features
+## Database
 
-### Authentication
-Users can register and securely log into their BudgetBuddySA account.
+Room Database is used for local storage of:
 
-### Expense Tracking
-Users can add, edit, delete and categorise expenses.
+- Expenses
+- Budgets
+- Savings goals
 
-### Budget Management
-Users can create monthly budgets and monitor their spending.
+The application can continue storing financial information when the REST API is unavailable.
 
-### Savings Goals
-Users can create savings targets and track their progress.
+## Testing
 
-### Gamification
-Users can earn badges and achievements for completing financial goals.
+The project includes unit tests for:
 
-### Offline Mode
-Users can record selected information while offline. Data can be synchronised when an internet connection becomes available.
+- Budget
+- Expenses
+- Savings
 
-### Multi-Language Support
-The application will support English, isiZulu and Xitsonga.
+GitHub Actions automatically builds and tests the project.
 
-## Project Structure
+## API
 
-The application is developed using Kotlin in Android Studio.
+The backend was developed using Spring Boot and provides REST endpoints for:
 
-The project will use a REST API to communicate with the server and MySQL database. Room Database will be used for appropriate local storage and offline functionality.
+- Expenses
+- Budgets
+- Savings
+- Health checking
 
-## Development
+## Build
 
-This project is being developed as part of the OPSC6312 Portfolio of Evidence.
+The Android APK can be generated from Android Studio using:
 
-Development follows a Research, Plan, Design, Build and Evaluate approach.
-
-## Author
-
-Ndzalama Nkanyana
+Build → Generate App Bundles or APKs → Generate APKs
