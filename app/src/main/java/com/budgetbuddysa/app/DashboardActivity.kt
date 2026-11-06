@@ -11,6 +11,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.Locale
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -55,6 +56,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun setupButtons() {
+
         addExpenseBtn.setOnClickListener {
             startActivity(Intent(this, AddExpenseActivity::class.java))
         }
@@ -90,6 +92,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun updateDashboard() {
+
         CoroutineScope(Dispatchers.IO).launch {
 
             val expenses = database.expenseDao().getAllExpenses()
@@ -108,22 +111,45 @@ class DashboardActivity : AppCompatActivity() {
             }
 
             withContext(Dispatchers.Main) {
-                expensesText.text =
-                    "Expenses: R %.2f".format(totalExpenses)
 
-                budgetText.text =
-                    "Budget: R %.2f".format(budgetAmount)
+                val isAfrikaans = resources.configuration.locales[0].language == "af"
 
-                balanceText.text =
-                    "Remaining: R %.2f".format(remaining)
+                expensesText.text = String.format(
+                    Locale.US,
+                    "%s: R %.2f",
+                    if (isAfrikaans) "Uitgawes" else "Expenses",
+                    totalExpenses
+                )
+
+                budgetText.text = String.format(
+                    Locale.US,
+                    "%s: R %.2f",
+                    if (isAfrikaans) "Begroting" else "Budget",
+                    budgetAmount
+                )
+
+                balanceText.text = String.format(
+                    Locale.US,
+                    "%s: R %.2f",
+                    if (isAfrikaans) "Oorblywend" else "Remaining",
+                    remaining
+                )
 
                 budgetProgress.progress = percentage
 
                 budgetProgressText.text =
                     if (budgetAmount > 0) {
-                        "$percentage% of budget used"
+                        if (isAfrikaans) {
+                            "$percentage% van begroting gebruik"
+                        } else {
+                            "$percentage% of budget used"
+                        }
                     } else {
-                        "No budget set"
+                        if (isAfrikaans) {
+                            "Geen begroting opgestel nie"
+                        } else {
+                            "No budget set"
+                        }
                     }
             }
         }

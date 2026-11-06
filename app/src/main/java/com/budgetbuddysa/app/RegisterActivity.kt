@@ -1,17 +1,24 @@
 package com.budgetbuddysa.app
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.userProfileChangeRequest
 
 class RegisterActivity : AppCompatActivity() {
 
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_register)
+
+        auth = FirebaseAuth.getInstance()
 
         val nameInput = findViewById<EditText>(R.id.nameInput)
         val emailInput = findViewById<EditText>(R.id.emailInput)
@@ -29,43 +36,73 @@ class RegisterActivity : AppCompatActivity() {
             val password = passwordInput.text.toString()
             val confirmPassword = confirmPasswordInput.text.toString()
 
-            if (name.isEmpty() || email.isEmpty() ||
-                password.isEmpty() || confirmPassword.isEmpty()
-            ) {
+            when {
+                name.isEmpty() || email.isEmpty() ||
+                        password.isEmpty() || confirmPassword.isEmpty() -> {
+                    showMessage("Please fill in all fields")
+                }
 
-                Toast.makeText(
-                    this,
-                    "Please fill in all fields",
-                    Toast.LENGTH_SHORT
-                ).show()
+                !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                    showMessage("Please enter a valid email address")
+                }
 
-            } else if (!android.util.Patterns.EMAIL_ADDRESS
-                    .matcher(email)
-                    .matches()
-            ) {
+                password.length < 6 -> {
+                    showMessage("Password must contain at least 6 characters")
+                }
 
-                Toast.makeText(
-                    this,
-                    "Please enter a valid email address",
-                    Toast.LENGTH_SHORT
-                ).show()
+                password != confirmPassword -> {
+                    showMessage("Passwords do not match")
+                }
 
-            } else if (password != confirmPassword) {
-
-                Toast.makeText(
-                    this,
-                    "Passwords do not match",
-                    Toast.LENGTH_SHORT
-                ).show()
-
-            } else {
-
-                Toast.makeText(
-                    this,
-                    "Account created successfully!",
-                    Toast.LENGTH_LONG
-                ).show()
+                else -> {
+                    registerUser(name, email, password)
+                }
             }
         }
+    }
+
+    private fun registerUser(
+        name: String,
+        email: String,
+        password: String
+    ) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+
+                if (task.isSuccessful) {
+
+                    val profileUpdates = userProfileChangeRequest {
+                        displayName = name
+                    }
+
+                    auth.currentUser?.updateProfile(profileUpdates)
+                        ?.addOnCompleteListener {
+
+                            showMessage("Account created successfully!")
+
+                            val intent = Intent(
+                                this,
+                                DashboardActivity::class.java
+                            )
+
+                            startActivity(intent)
+                            finish()
+                        }
+
+                } else {
+                    showMessage(
+                        task.exception?.localizedMessage
+                            ?: "Registration failed. Please try again."
+                    )
+                }
+            }
+    }
+
+    private fun showMessage(message: String) {
+        Toast.makeText(
+            this,
+            message,
+            Toast.LENGTH_LONG
+        ).show()
     }
 }

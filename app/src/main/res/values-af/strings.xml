@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Algemeen -->
+    <string name="app_name">BudgetBuddy SA</string>
+    <string name="tagline">Bestuur jou geld slimmer</string>
+    <string name="financial_companion">Jou persoonlike finansiële metgesel</string>
+    <string name="welcome">Welkom by BudgetBuddy SA</string>
+
+    <!-- Hoofskerm -->
+    <string name="login_button">TEKEN AAN</string>
+    <string name="register">REGISTREER</string>
+
+    <!-- Registrasie -->
+    <string name="create_account">Skep Rekening</string>
+    <string name="create_account_subtitle">Begin jou geld slimmer bestuur</string>
+    <string name="create_account_button">SKEP REKENING</string>
+    <string name="full_name">Volle Naam</string>
+    <string name="enter_name">Voer jou volle naam in</string>
+    <string name="email">E-posadres</string>
+    <string name="enter_email">Voer jou e-posadres in</string>
+    <string name="password">Wagwoord</string>
+    <string name="enter_password">Voer jou wagwoord in</string>
+    <string name="confirm_password">Bevestig Wagwoord</string>
+    <string name="confirm_your_password">Bevestig jou wagwoord</string>
+    <string name="register_account">REGISTREER</string>
+    <string name="already_have_account">Het jy reeds \'n rekening? Teken aan</string>
+
+    <!-- Aanteken -->
+    <string name="login">Teken Aan</string>
+    <string name="login_title">Welkom Terug</string>
+    <string name="welcome_back">Welkom Terug!</string>
+    <string name="login_subtitle">Teken aan om jou finansies te bestuur</string>
+    <string name="login_email">E-posadres</string>
+    <string name="email_address">E-posadres</string>
+    <string name="login_password">Wagwoord</string>
+    <string name="login_account">TEKEN AAN</string>
+    <string name="google_sign_in">TEKEN AAN MET GOOGLE</string>
+    <string name="or">OF</string>
+    <string name="no_account">Het jy nie \'n rekening nie?</string>
+    <string name="dont_have_account">Het jy nie \'n rekening nie? Registreer</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard">Dashboard</string>
+    <string name="dashboard_welcome">Welkom by jou dashboard!</string>
+    <string name="budget">Begroting</string>
+    <string name="expenses">Uitgawes</string>
+    <string name="expenses_default">Uitgawes: R 0.00</string>
+    <string name="balance">Oorblywende Saldo</string>
+    <string name="budget_progress">Begrotingsvordering</string>
+    <string name="budget_progress_default">0% van begroting gebruik</string>
+    <string name="add_expense">VOEG UITGAWE BY</string>
+    <string name="view_expenses">BEKYK UITGAWES</string>
+    <string name="manage_budget">BESTUUR BEGROTING</string>
+    <string name="savings">SPAARGELD</string>
+    <string name="categories">KATEGORIEË</string>
+    <string name="achievements">PRESTASIES</string>
+    <string name="settings">INSTELLINGS</string>
+
+    <!-- Uitgawes -->
+    <string name="my_expenses">My Uitgawes</string>
+    <string name="amount">Bedrag (R)</string>
+    <string name="enter_amount">Voer bedrag in</string>
+    <string name="description">Beskrywing</string>
+    <string name="enter_description">Voer uitgawebeskrywing in</string>
+    <string name="select_category">Kies Kategorie</string>
+    <string name="date">Datum</string>
+    <string name="select_date">Kies datum</string>
+    <string name="save_expense">STOOR UITGAWE</string>
+    <string name="total_expenses_default">Totale Uitgawes: R 0.00</string>
+    <string name="no_expenses_recorded">Geen uitgawes is nog aangeteken nie.</string>
+    <string name="add_another_expense">VOEG NOG \'N UITGAWE BY</string>
+    <string name="clear_all_expenses">VEE ALLE UITGAWES UIT</string>
+
+    <!-- Begroting -->
+    <string name="monthly_budget">Maandelikse Begroting</string>
+    <string name="set_monthly_budget">Stel Jou Maandelikse Begroting</string>
+    <string name="enter_budget_amount">Voer begrotingsbedrag in</string>
+    <string name="save_budget">STOOR BEGROTING</string>
+    <string name="budget_default">Begroting: R 0.00</string>
+    <string name="spent_default">Bestee: R 0.00</string>
+    <string name="remaining_default">Oorblywend: R 0.00</string>
+
+    <!-- Spaargeld -->
+    <string name="savings_goals">Spaardoelwitte</string>
+    <string name="savings_subtitle">Stel doelwitte en volg jou spaargeld</string>
+    <string name="goal_name">Doelwit Naam</string>
+    <string name="enter_goal_name">Voer jou spaardoelwit in</string>
+    <string name="goal_amount">Teikenbedrag (R)</string>
+    <string name="target_amount">Teikenbedrag (R)</string>
+    <string name="enter_goal_amount">Voer teikenbedrag in</string>
+    <string name="current_savings">Huidige Spaargeld (R)</string>
+    <string name="enter_current_savings">Voer huidige spaargeld in</string>
+    <string name="save_goal">STOOR DOELWIT</string>
+    <string name="goal_progress">Doelwitvordering</string>
+    <string name="goal_default">Doelwit: Geen doelwit gestel nie</string>
+    <string name="goal_progress_default">Gespaar: R 0.00 / R 0.00</string>
+    <string name="savings_percentage">0% voltooi</string>
+    <string name="savings_percentage_default">0% voltooi</string>
+    <string name="new_savings_goal">Skep \'n nuwe spaardoelwit</string>
+
+    <!-- Kategorieë -->
+    <string name="categories_subtitle">Organiseer jou uitgawes volgens kategorie</string>
+    <string name="default_categories">Kos\nVervoer\nVermaak\nOnderwys\nInkopies\nAnder</string>
+    <string name="enter_new_category">Voer nuwe kategorie in</string>
+    <string name="add_category">VOEG KATEGORIE BY</string>
+
+    <!-- Prestasies -->
+    <string name="achievements_subtitle">Volg jou finansiële prestasies</string>
+    <string name="achievement_points_default">Punte: 0</string>
+    <string name="achievement_list_default">Jou prestasies sal hier verskyn.</string>
+    <string name="achievement_progress_default">0% prestasievordering</string>
+    <string name="achievement_points">Punte: %1$d</string>
+    <string name="first_expense">Eerste Uitgawe - Teken jou eerste uitgawe aan</string>
+    <string name="first_expense_completed">Eerste Uitgawe - Voltooi!</string>
+    <string name="budget_planner">Begrotingsbeplanner - Stel jou maandelikse begroting</string>
+    <string name="budget_planner_completed">Begrotingsbeplanner - Voltooi!</string>
+    <string name="savings_starter">Spaargeldbeginner - Skep jou eerste spaardoelwit</string>
+    <string name="savings_starter_completed">Spaargeldbeginner - Voltooi!</string>
+    <string name="smart_saver">Slim Spaarder - Bereik jou spaardoelwit</string>
+    <string name="smart_saver_completed">Slim Spaarder - Voltooi!</string>
+    <string name="achievement_progress">%1$d%% prestasievordering</string>
+
+    <!-- Instellings -->
+    <string name="language">Taal</string>
+    <string name="notifications">Kennisgewings</string>
+    <string name="enable_notifications">Aktiveer Kennisgewings</string>
+    <string name="about">Meer Oor</string>
+    <string name="logout">TEKEN AF</string>
+    <string name="english_language">Engels</string>
+    <string name="afrikaans_language">Afrikaans</string>
+    <string name="notifications_enabled">Kennisgewings geaktiveer</string>
+    <string name="notifications_disabled">Kennisgewings gedeaktiveer</string>
+    <string name="about_message">BudgetBuddy SA\nPersoonlike begrotingsbestuurtoepassing</string>
+
+</resources>

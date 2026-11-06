@@ -14,106 +14,79 @@ class AchievementsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(
-            R.layout.activity_achievements
-        )
+        setContentView(R.layout.activity_achievements)
 
         achievementPointsText =
-            findViewById(
-                R.id.achievementPointsText
-            )
+            findViewById(R.id.achievementPointsText)
 
         achievementListText =
-            findViewById(
-                R.id.achievementListText
-            )
+            findViewById(R.id.achievementListText)
 
         achievementProgressBar =
-            findViewById(
-                R.id.achievementProgressBar
-            )
+            findViewById(R.id.achievementProgressBar)
 
         achievementProgressText =
-            findViewById(
-                R.id.achievementProgressText
-            )
+            findViewById(R.id.achievementProgressText)
     }
 
     override fun onResume() {
         super.onResume()
-
         updateAchievements()
     }
 
     private fun updateAchievements() {
 
-        val achievementManager =
-            AchievementManager(this)
+        val achievementManager = AchievementManager(this)
 
-        val points =
-            achievementManager.getTotalPoints()
-
-        val progress =
-            achievementManager.getProgress()
+        val points = achievementManager.getTotalPoints()
+        val progress = achievementManager.getProgress()
 
         val firstExpenseCompleted =
-            achievementManager
-                .isFirstExpenseCompleted()
+            achievementManager.isFirstExpenseCompleted()
 
         val budgetCompleted =
-            achievementManager
-                .isBudgetPlannerCompleted()
+            achievementManager.isBudgetPlannerCompleted()
 
         val savingsCompleted =
-            achievementManager
-                .isSavingsStarterCompleted()
+            achievementManager.isSavingsStarterCompleted()
 
         val smartSaverCompleted =
-            achievementManager
-                .isSmartSaverCompleted()
+            achievementManager.isSmartSaverCompleted()
 
+        // Display points
         achievementPointsText.text =
-            "Points: $points"
+            getString(R.string.achievement_points, points)
 
+        // First Expense
         val firstExpenseText =
             if (firstExpenseCompleted) {
-
-                "🏆 First Expense — COMPLETED"
-
+                getString(R.string.first_expense_completed)
             } else {
-
-                "🏆 First Expense"
+                getString(R.string.first_expense)
             }
 
+        // Budget Planner
         val budgetText =
             if (budgetCompleted) {
-
-                "🏆 Budget Planner — COMPLETED"
-
+                getString(R.string.budget_planner_completed)
             } else {
-
-                "🏆 Budget Planner"
+                getString(R.string.budget_planner)
             }
 
+        // Savings Starter
         val savingsText =
             if (savingsCompleted) {
-
-                "🏆 Savings Starter — COMPLETED"
-
+                getString(R.string.savings_starter_completed)
             } else {
-
-                "🏆 Savings Starter"
+                getString(R.string.savings_starter)
             }
 
+        // Smart Saver
         val smartSaverText =
             if (smartSaverCompleted) {
-
-                "🏆 Smart Saver — COMPLETED"
-
+                getString(R.string.smart_saver_completed)
             } else {
-
-                "🏆 Smart Saver"
+                getString(R.string.smart_saver)
             }
 
         achievementListText.text =
@@ -122,10 +95,10 @@ class AchievementsActivity : AppCompatActivity() {
                     "$savingsText\n\n" +
                     smartSaverText
 
-        achievementProgressBar.progress =
-            progress
+        // Update progress
+        achievementProgressBar.progress = progress
 
         achievementProgressText.text =
-            "$progress% achievement progress"
+            getString(R.string.achievement_progress, progress)
     }
 }

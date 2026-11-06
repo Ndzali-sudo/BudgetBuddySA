@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Monthly Budget"
+            android:text="@string/monthly_budget"
             android:textSize="28sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -22,7 +23,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Set your monthly budget"
+            android:text="@string/set_monthly_budget"
             android:textSize="16sp"
             android:layout_marginBottom="8dp" />
 
@@ -30,7 +31,7 @@
             android:id="@+id/budgetAmountInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter budget amount"
+            android:hint="@string/enter_budget_amount"
             android:inputType="numberDecimal"
             android:layout_marginBottom="16dp" />
 
@@ -38,14 +39,14 @@
             android:id="@+id/saveBudgetBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Budget"
+            android:text="@string/save_budget"
             android:layout_marginBottom="24dp" />
 
         <TextView
             android:id="@+id/budgetText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Budget: R 0.00"
+            android:text="@string/budget_default"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="12dp" />
@@ -54,7 +55,7 @@
             android:id="@+id/spentText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spent: R 0.00"
+            android:text="@string/spent_default"
             android:textSize="18sp"
             android:layout_marginBottom="12dp" />
 
@@ -62,7 +63,7 @@
             android:id="@+id/remainingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Remaining: R 0.00"
+            android:text="@string/remaining_default"
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
 

@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Savings Goals"
+            android:text="@string/savings_goals"
             android:textColor="#111111"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Set goals and track your savings"
+            android:text="@string/savings_subtitle"
             android:textColor="#666666"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
@@ -34,7 +34,7 @@
             android:id="@+id/goalNameInput"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:hint="Goal Name"
+            android:hint="@string/goal_name"
             android:inputType="text"
             android:padding="14dp"/>
 
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="16dp"
-            android:hint="Target Amount (R)"
+            android:hint="@string/target_amount"
             android:inputType="numberDecimal"
             android:padding="14dp"/>
 
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="16dp"
-            android:hint="Current Savings (R)"
+            android:hint="@string/current_savings"
             android:inputType="numberDecimal"
             android:padding="14dp"/>
 
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="22dp"
-            android:text="SAVE GOAL"
+            android:text="@string/save_goal"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:backgroundTint="#1B5E20"/>
@@ -70,7 +70,7 @@
             android:id="@+id/goalNameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Goal: No goal set"
+            android:text="@string/goal_default"
             android:textColor="#111111"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -81,7 +81,7 @@
             android:id="@+id/goalProgressText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Progress: R 0.00 / R 0.00"
+            android:text="@string/goal_progress_default"
             android:textColor="#666666"
             android:textSize="16sp"
             android:padding="10dp"/>
@@ -99,7 +99,7 @@
             android:id="@+id/savingsPercentageText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0% saved"
+            android:text="@string/savings_percentage_default"
             android:textColor="#1B5E20"
             android:textSize="17sp"
             android:textStyle="bold"

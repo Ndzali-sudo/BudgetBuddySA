@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Categories"
+            android:text="@string/categories"
             android:textColor="#111111"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Organise your expenses by category"
+            android:text="@string/categories_subtitle"
             android:textColor="#666666"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
@@ -34,7 +34,7 @@
             android:id="@+id/categoryListText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Food&#10;Transport&#10;Entertainment&#10;Education&#10;Shopping&#10;Other"
+            android:text="@string/default_categories"
             android:textColor="#333333"
             android:textSize="17sp"
             android:padding="16dp"/>
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
-            android:hint="Enter new category"
+            android:hint="@string/enter_new_category"
             android:inputType="text"
             android:padding="14dp"/>
 
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="15dp"
-            android:text="ADD CATEGORY"
+            android:text="@string/add_category"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:backgroundTint="#1B5E20"/>

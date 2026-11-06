@@ -29,6 +29,9 @@ class SavingsActivity : AppCompatActivity() {
         BudgetDatabase.getDatabase(this)
     }
 
+    private val isAfrikaans: Boolean
+        get() = resources.configuration.locales[0].language == "af"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_savings)
@@ -50,26 +53,31 @@ class SavingsActivity : AppCompatActivity() {
     }
 
     private fun saveSavings() {
+
         val goalName = goalNameInput.text.toString().trim()
         val targetAmount = goalAmountInput.text.toString().toDoubleOrNull()
         val currentAmount = currentSavingsInput.text.toString().toDoubleOrNull()
 
         if (goalName.isEmpty()) {
-            Toast.makeText(this, "Enter a savings goal.", Toast.LENGTH_SHORT).show()
+            goalNameInput.error =
+                if (isAfrikaans) "Voer 'n spaardoelwit in" else "Enter a savings goal"
             return
         }
 
         if (targetAmount == null || targetAmount <= 0) {
-            Toast.makeText(this, "Enter a valid goal amount.", Toast.LENGTH_SHORT).show()
+            goalAmountInput.error =
+                if (isAfrikaans) "Voer 'n geldige teikenbedrag in" else "Enter a valid goal amount"
             return
         }
 
         if (currentAmount == null || currentAmount < 0) {
-            Toast.makeText(this, "Enter a valid current savings amount.", Toast.LENGTH_SHORT).show()
+            currentSavingsInput.error =
+                if (isAfrikaans) "Voer geldige huidige spaargeld in" else "Enter a valid current savings amount"
             return
         }
 
         CoroutineScope(Dispatchers.IO).launch {
+
             database.savingsDao().insertSavings(
                 SavingsEntity(
                     goalName = goalName,
@@ -79,11 +87,15 @@ class SavingsActivity : AppCompatActivity() {
             )
 
             withContext(Dispatchers.Main) {
+
                 updateDisplay(goalName, targetAmount, currentAmount)
 
                 Toast.makeText(
                     this@SavingsActivity,
-                    "Savings goal saved successfully!",
+                    if (isAfrikaans)
+                        "Spaardoelwit suksesvol gestoor!"
+                    else
+                        "Savings goal saved successfully!",
                     Toast.LENGTH_SHORT
                 ).show()
             }
@@ -91,11 +103,15 @@ class SavingsActivity : AppCompatActivity() {
     }
 
     private fun loadSavings() {
+
         CoroutineScope(Dispatchers.IO).launch {
+
             val savings = database.savingsDao().getSavings()
 
             withContext(Dispatchers.Main) {
+
                 if (savings != null) {
+
                     goalNameInput.setText(savings.goalName)
                     goalAmountInput.setText(savings.targetAmount.toString())
                     currentSavingsInput.setText(savings.currentAmount.toString())
@@ -115,6 +131,7 @@ class SavingsActivity : AppCompatActivity() {
         targetAmount: Double,
         currentAmount: Double
     ) {
+
         val percentage = if (targetAmount > 0) {
             ((currentAmount / targetAmount) * 100)
                 .toInt()
@@ -123,11 +140,22 @@ class SavingsActivity : AppCompatActivity() {
             0
         }
 
-        goalNameText.text = "Goal: $goalName"
-        goalProgressText.text =
+        goalNameText.text =
+            if (isAfrikaans) "Doelwit: $goalName" else "Goal: $goalName"
+
+        goalProgressText.text = if (isAfrikaans) {
+            "Gespaar: R %.2f / R %.2f".format(currentAmount, targetAmount)
+        } else {
             "Saved: R %.2f / R %.2f".format(currentAmount, targetAmount)
+        }
 
         savingsProgressBar.progress = percentage
-        savingsPercentageText.text = "$percentage% complete"
+
+        savingsPercentageText.text = if (isAfrikaans) {
+            "$percentage% voltooi"
+        } else {
+            "$percentage% complete"
+        }
     }
 }
+

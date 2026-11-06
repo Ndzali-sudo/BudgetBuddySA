@@ -1,3 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BudgetBuddySA</string>
+
+    <!-- General -->
+    <string name="app_name">BudgetBuddy SA</string>
+    <string name="tagline">Manage your money smarter</string>
+    <string name="financial_companion">Your personal financial companion</string>
+    <string name="welcome">Welcome to BudgetBuddy SA</string>
+
+    <!-- Main screen -->
+    <string name="login_button">LOGIN</string>
+    <string name="register">REGISTER</string>
+
+    <!-- Registration -->
+    <string name="create_account">Create Account</string>
+    <string name="create_account_subtitle">Start managing your money smarter</string>
+    <string name="create_account_button">CREATE ACCOUNT</string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_name">Enter your full name</string>
+    <string name="email">Email Address</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="register_account">REGISTER</string>
+    <string name="already_have_account">Already have an account? Login</string>
+
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login_subtitle">Sign in to manage your finances</string>
+    <string name="login_email">Email Address</string>
+    <string name="email_address">Email Address</string>
+    <string name="login_password">Password</string>
+    <string name="login_account">LOGIN</string>
+    <string name="google_sign_in">SIGN IN WITH GOOGLE</string>
+    <string name="or">OR</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="dont_have_account">Don\'t have an account? Register</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard">Dashboard</string>
+    <string name="dashboard_welcome">Welcome to your dashboard!</string>
+    <string name="budget">Budget</string>
+    <string name="expenses">Expenses</string>
+    <string name="expenses_default">Expenses: R 0.00</string>
+    <string name="balance">Remaining Balance</string>
+    <string name="budget_progress">Budget Progress</string>
+    <string name="budget_progress_default">0% of budget used</string>
+    <string name="add_expense">ADD EXPENSE</string>
+    <string name="view_expenses">VIEW EXPENSES</string>
+    <string name="manage_budget">MANAGE BUDGET</string>
+    <string name="savings">SAVINGS</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="achievements">ACHIEVEMENTS</string>
+    <string name="settings">SETTINGS</string>
+
+    <!-- Expenses -->
+    <string name="my_expenses">My Expenses</string>
+    <string name="amount">Amount (R)</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter expense description</string>
+    <string name="select_category">Select Category</string>
+    <string name="date">Date</string>
+    <string name="select_date">Select date</string>
+    <string name="save_expense">SAVE EXPENSE</string>
+    <string name="total_expenses_default">Total Expenses: R 0.00</string>
+    <string name="no_expenses_recorded">No expenses recorded yet.</string>
+    <string name="add_another_expense">ADD ANOTHER EXPENSE</string>
+    <string name="clear_all_expenses">CLEAR ALL EXPENSES</string>
+
+    <!-- Budget -->
+    <string name="monthly_budget">Monthly Budget</string>
+    <string name="set_monthly_budget">Set Your Monthly Budget</string>
+    <string name="enter_budget_amount">Enter budget amount</string>
+    <string name="save_budget">SAVE BUDGET</string>
+    <string name="budget_default">Budget: R 0.00</string>
+    <string name="spent_default">Spent: R 0.00</string>
+    <string name="remaining_default">Remaining: R 0.00</string>
+
+    <!-- Savings -->
+    <string name="savings_goals">Savings Goals</string>
+    <string name="savings_subtitle">Set goals and track your savings</string>
+    <string name="goal_name">Goal Name</string>
+    <string name="enter_goal_name">Enter your savings goal</string>
+    <string name="goal_amount">Target Amount (R)</string>
+    <string name="target_amount">Target Amount (R)</string>
+    <string name="enter_goal_amount">Enter target amount</string>
+    <string name="current_savings">Current Savings (R)</string>
+    <string name="enter_current_savings">Enter current savings</string>
+    <string name="save_goal">SAVE GOAL</string>
+    <string name="goal_progress">Goal Progress</string>
+    <string name="goal_default">Goal: No goal set</string>
+    <string name="goal_progress_default">Saved: R 0.00 / R 0.00</string>
+    <string name="savings_percentage">0% completed</string>
+    <string name="savings_percentage_default">0% completed</string>
+    <string name="new_savings_goal">Create a new savings goal</string>
+
+    <!-- Categories -->
+    <string name="categories_subtitle">Organise your expenses by category</string>
+    <string name="default_categories">Food\nTransport\nEntertainment\nEducation\nShopping\nOther</string>
+    <string name="enter_new_category">Enter new category</string>
+    <string name="add_category">ADD CATEGORY</string>
+
+    <!-- Achievements -->
+    <string name="achievements_subtitle">Track your financial achievements</string>
+    <string name="achievement_points_default">Points: 0</string>
+    <string name="achievement_list_default">Your achievements will appear here.</string>
+    <string name="achievement_progress_default">0% achievement progress</string>
+    <string name="achievement_points">Points: %1$d</string>
+    <string name="first_expense">First Expense - Record your first expense</string>
+    <string name="first_expense_completed">First Expense - Completed!</string>
+    <string name="budget_planner">Budget Planner - Set your monthly budget</string>
+    <string name="budget_planner_completed">Budget Planner - Completed!</string>
+    <string name="savings_starter">Savings Starter - Create your first savings goal</string>
+    <string name="savings_starter_completed">Savings Starter - Completed!</string>
+    <string name="smart_saver">Smart Saver - Reach your savings target</string>
+    <string name="smart_saver_completed">Smart Saver - Completed!</string>
+    <string name="achievement_progress">%1$d%% achievement progress</string>
+
+    <!-- Settings -->
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="about">About</string>
+    <string name="logout">LOGOUT</string>
+    <string name="english_language">English</string>
+    <string name="afrikaans_language">Afrikaans</string>
+    <string name="notifications_enabled">Notifications enabled</string>
+    <string name="notifications_disabled">Notifications disabled</string>
+    <string name="about_message">BudgetBuddy SA\nPersonal Budget Management App</string>
+
 </resources>

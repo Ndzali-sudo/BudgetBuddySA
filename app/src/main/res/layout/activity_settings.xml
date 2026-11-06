@@ -15,7 +15,7 @@
             android:id="@+id/settingsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/settings"
             android:textSize="30sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -24,7 +24,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Notifications"
+            android:text="@string/language"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -33,7 +47,7 @@
             android:id="@+id/notificationsSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enable notifications"
+            android:text="@string/enable_notifications"
             android:checked="true"
             android:layout_marginBottom="24dp" />
 
@@ -41,7 +55,7 @@
             android:id="@+id/aboutBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="About BudgetBuddy SA"
+            android:text="@string/about"
             android:textAllCaps="false"
             android:layout_marginBottom="12dp" />
 
@@ -49,7 +63,7 @@
             android:id="@+id/logoutBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="@string/logout"
             android:textAllCaps="false" />
 
     </LinearLayout>
