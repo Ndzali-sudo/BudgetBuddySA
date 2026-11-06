@@ -1,71 +1,134 @@
-# BudgetBuddySA
+# BudgetBuddy SA 🇿🇦
 
-## Personal Financial Management Mobile Application
+### Personal Budget and Expense Management Android Application
 
-BudgetBuddySA is a mobile financial-management application designed to help students and young adults manage their personal finances.
+BudgetBuddy SA is an Android-based personal finance management application designed to help users manage their money, monitor expenses, create budgets and track savings goals.
 
-## Purpose
+The application aims to encourage responsible financial habits by providing users with tools to monitor their spending and understand their financial progress.
 
-The application allows users to:
+## 📱 Application Features
 
-- Register and log in securely
-- Track expenses
-- Categorise expenses
-- Create monthly budgets
-- Set savings goals
-- Monitor financial progress
-- Earn achievements
-- Receive notifications
-- Use selected features offline
-- Synchronise data when internet connectivity is restored
-- Change application settings
-- Select supported South African languages
+- **User Authentication:** Register and log in using email and password or Google Single Sign-On.
+- **Dashboard:** View financial information and access the application's main features.
+- **Expense Management:** Add and manage personal expenses.
+- **Budget Management:** Create budgets and monitor spending.
+- **Budget Notifications:** Receive alerts when spending reaches 80% and 100% of the allocated budget.
+- **Savings Goals:** Set savings targets and monitor progress.
+- **Categories:** Organise expenses into different categories.
+- **Achievements:** Track financial progress and achievements.
+- **Offline Support:** Store application data locally using Room Database.
+- **Cloud Synchronisation:** Synchronise expense information with Firebase Firestore when an internet connection is available.
+- **Push Notifications:** Receive notifications through Firebase Cloud Messaging.
+- **Multilingual Support:** English and Afrikaans language options.
 
-## Technologies
+## 🛠️ Technologies Used
 
-- Kotlin
-- Android Studio
-- REST API
-- MySQL
-- Room Database
-- GitHub
-- GitHub Actions
+| Technology | Purpose |
+|---|---|
+| Kotlin | Main programming language |
+| Android Studio | Android development environment |
+| XML | User interface design |
+| Room Database | Local data storage |
+| Firebase Authentication | User authentication |
+| Google Sign-In | Single Sign-On |
+| Firebase Firestore | Cloud database and synchronisation |
+| Firebase Cloud Messaging | Push notifications |
+| WorkManager | Background synchronisation |
+| GitHub | Version control and source code management |
+| GitHub Actions | Automated build workflow |
 
-## Main Features
+## 🏗️ Application Architecture
 
-### Authentication
-Users can register and securely log into their BudgetBuddySA account.
+BudgetBuddy SA uses an Android application structure with separate components for:
 
-### Expense Tracking
-Users can add, edit, delete and categorise expenses.
+- User interface and activities.
+- Local database operations.
+- Firebase authentication.
+- Cloud data management.
+- Background synchronisation.
+- Notification management.
 
-### Budget Management
-Users can create monthly budgets and monitor their spending.
+Room Database provides local storage, while Firebase Firestore supports cloud synchronisation.
 
-### Savings Goals
-Users can create savings targets and track their progress.
+## 📋 Requirements
 
-### Gamification
-Users can earn badges and achievements for completing financial goals.
+To run the project, you need:
 
-### Offline Mode
-Users can record selected information while offline. Data can be synchronised when an internet connection becomes available.
+- Android Studio.
+- Android SDK 36.1.
+- Kotlin support.
+- JDK 21 or a compatible configured JDK.
+- An Android device or emulator running Android 8.0 or later.
+- Internet connection for Firebase services.
 
-### Multi-Language Support
-The application will support English, isiZulu and Xitsonga.
+## 🚀 Installation and Setup
 
-## Project Structure
+1. Clone the repository:
 
-The application is developed using Kotlin in Android Studio.
+   ```bash
+   git clone https://github.com/Ndzali-sudo/BudgetBuddySA.git
+   ```
 
-The project will use a REST API to communicate with the server and MySQL database. Room Database will be used for appropriate local storage and offline functionality.
+2. Open Android Studio.
 
-## Development
+3. Select **Open** and choose the cloned BudgetBuddySA project folder.
 
-This project is being developed as part of the OPSC6312 Portfolio of Evidence.
+4. Allow Gradle to synchronise the project.
 
-Development follows a Research, Plan, Design, Build and Evaluate approach.
+5. Configure your own Firebase project and register the Android application using:
 
-## Author
+   ```text
+   com.budgetbuddysa.app
+   ```
 
-Ndzalama Nkanyana
+6. Download the Firebase configuration file (`google-services.json`) and place it inside the `app` directory.
+
+7. Enable the required Firebase services:
+    - Authentication
+    - Google Sign-In
+    - Cloud Firestore
+    - Cloud Messaging
+
+8. Run the application on an Android device or emulator.
+
+## 🧪 Testing
+
+The application is developed and tested using Android Studio.
+
+Testing includes:
+
+- User registration and login.
+- Google Single Sign-On.
+- Expense management.
+- Budget creation and tracking.
+- Budget threshold notifications.
+- Savings goal functionality.
+- English and Afrikaans language switching.
+- Local database functionality.
+- Firebase notification delivery.
+- Application build verification.
+
+The project also includes a GitHub Actions workflow for automated build checks.
+
+## 📦 Release Build
+
+A signed release APK has been generated for BudgetBuddy SA.
+
+The application can be built through Android Studio using:
+
+**Build → Generate Signed Bundle / APK**
+
+Select the release build variant to generate the release APK.
+
+## 👩‍💻 Developer
+
+**Name:** Ndzalama Nkanyana  
+**Student Number:** ST10450463  
+**Institution:** Rosebank International University  
+**Qualification:** Diploma in Information Technology  
+**Project:** BudgetBuddy SA
+
+## 🎯 Project Purpose
+
+BudgetBuddy SA was developed as part of an Information Technology practical project to demonstrate Android application development, database management, authentication, cloud integration, notifications, offline functionality and multilingual support.
+
