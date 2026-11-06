@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1023761749638",
+    "project_id": "budgetbuddysa",
+    "storage_bucket": "budgetbuddysa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023761749638:android:6de7127c244c279648a307",
+        "android_client_info": {
+          "package_name": "com.budgetbuddysa.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023761749638-0n0ftfi99o10m5dom9vbd23cvd438roh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.budgetbuddysa.app",
+            "certificate_hash": "0cf4f700ab8783bea5636c6577ae7ad7b3f90848"
+          }
+        },
+        {
+          "client_id": "1023761749638-6rs17f1vqloma9sqffdms0gli7tn2mhr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPoE0-xW_C3aSYdksrVwlme-TdIbnizec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023761749638-6rs17f1vqloma9sqffdms0gli7tn2mhr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
