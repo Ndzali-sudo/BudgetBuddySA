@@ -130,5 +130,5 @@ Select the release build variant to generate the release APK.
 
 ## 🎯 Project Purpose
 
-BudgetBuddy SA was developed as part of an Information Technology practical project to demonstrate Android application development, database management, authentication, cloud integration, notifications, offline functionality and multilingual support.
+BudgetBuddy SA was developed as part of an Information Technology practical project to demonstrate Android application development, database management, authentication, cloud integration, notifications, offline functionality and multilingual support
 
