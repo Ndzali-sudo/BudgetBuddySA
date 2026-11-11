@@ -132,6 +132,21 @@ Select the release build variant to generate the release APK.
 
 BudgetBuddy SA was developed as part of an Information Technology practical project to demonstrate Android application development, database management, authentication, cloud integration, notifications, offline functionality and multilingual support
 
+## Application Screenshots
+
+1. Login Screen
+2. Registration Screen
+3. Dashboard
+4.  4. Expenses
+5. Add Expense
+6. Budget Management
+7. Savings
+8. Categories
+9. Achievements
+10. Settings
+11. Notifications
+
+
 YOUTUBE DEMONSTRATION VIDEO LINK▶️
 https://youtube.com/shorts/xZvpvSC3krY?si=HMN2hGl8rcMbAkG4
 
